@@ -1,24 +1,3 @@
-%=======================================================================
-%  The Earth Flyby Anomaly in the Azimuthally Symmetric Theory
-%  of Gravitation
-%
-%  P. A. Nesvinga
-%  MPhil in Fundamental Theoretical Astrophysics
-%  National University of Science & Technology, Bulawayo
-%
-%  COMPILE:  pdfLaTeX  (Overleaf: Menu -> Compiler -> pdfLaTeX)
-%            One pass is enough; no bibliography run required.
-%
-%  ANIMATIONS: the three animated figures use the `animate' package.
-%  They play in Adobe Acrobat and PDF-XChange. Overleaf's built-in
-%  previewer, browser viewers and macOS Preview show the first frame
-%  only -- every first frame is a complete standalone figure, so the
-%  deck reads correctly either way. Present from Acrobat if you want
-%  the motion.
-%
-%  To hand out a static version, replace \animategraphics{...}{anim/x-}{0}{31}
-%  with \includegraphics{anim/x-0}.
-%=======================================================================
 \documentclass[aspectratio=169,10pt]{beamer}
 
 \usepackage[T1]{fontenc}
@@ -32,21 +11,9 @@
 \usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 \usepackage{appendixnumberbeamer}
 
-%-----------------------------------------------------------------------
-%  Backup slides.  Set to \backuptrue to append three extra frames after
-%  the summary covering sample size, the Juno elimination study, and the
-%  per-flyby coupling.  They sit after the final frame, are excluded from
-%  the page count by appendixnumberbeamer, and never display unless you
-%  navigate to them -- useful to have loaded during questions.
-%  Default: off, so the compiled deck is exactly twelve pages.
-%-----------------------------------------------------------------------
 \newif\ifbackup
 \backupfalse
 
-%=======================================================================
-%  A self-contained theme.  No external fonts, no theme packages: this
-%  compiles identically on any TeX distribution.
-%=======================================================================
 \usetheme{default}
 \usecolortheme{default}
 \setbeamertemplate{navigation symbols}{}
@@ -72,7 +39,6 @@
 \setbeamerfont{title}{size=\LARGE,series=\bfseries}
 \setbeamerfont{footline}{size=\scriptsize}
 
-% Frame title: bold title with a thin rule underneath
 \setbeamertemplate{frametitle}{%
   \vskip0.9ex%
   \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.9cm,rightskip=0.9cm]{frametitle}%
@@ -83,7 +49,6 @@
   \vskip0.6ex%
 }
 
-% Footline: short title, and slide number
 \setbeamertemplate{footline}{%
   \hbox{%
     \begin{beamercolorbox}[wd=.80\paperwidth,ht=2.4ex,dp=1.4ex,leftskip=0.9cm]{}%
@@ -97,9 +62,6 @@
 
 \setbeamersize{text margin left=0.9cm,text margin right=0.9cm}
 
-%-----------------------------------------------------------------------
-%  Shorthands
-%-----------------------------------------------------------------------
 \newcommand{\ASTG}{ASTG}
 \newcommand{\dVp}{\Delta V_p}
 \newcommand{\dVinf}{\Delta V_\infty}
@@ -110,16 +72,13 @@
 \newcommand{\sg}{s_g}
 \newcommand{\kA}{\kappa_{\!\scriptscriptstyle A}}
 
-% A boxed highlight
 \newcommand{\keybox}[1]{%
   \begin{center}\setlength{\fboxsep}{7pt}%
   \colorbox{softbg}{\parbox{0.90\textwidth}{\centering #1}}%
   \end{center}}
 
-% Small caption under a figure
 \newcommand{\figcap}[1]{{\footnotesize\color{muted} #1}}
 
-%=======================================================================
 \title{The Earth Flyby Anomaly in the Azimuthally\\[0.2ex]
        Symmetric Theory of Gravitation}
 \author{P.~A.~Nesvinga}
@@ -129,9 +88,6 @@
 
 \begin{document}
 
-%=======================================================================
-% 1 -- TITLE
-%=======================================================================
 {
 \setbeamertemplate{footline}{}
 \begin{frame}[plain]
@@ -152,9 +108,6 @@
 \end{frame}
 }
 
-%=======================================================================
-% 2 -- THE OBSERVATION
-%=======================================================================
 \begin{frame}{Nine Earth flybys, four unexplained velocity increments}
 
   \begin{center}
@@ -182,9 +135,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 3 -- THE THEORY
-%=======================================================================
 \begin{frame}{A spinning body cannot have a spherical potential}
 
   \begin{columns}[T]
@@ -224,9 +174,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 4 -- THE DERIVATION
-%=======================================================================
 \begin{frame}{Vis-viva evaluated where it is exact: at perigee}
 
   \begin{columns}[T]
@@ -267,9 +214,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 5 -- THE RESULT
-%=======================================================================
 \begin{frame}{The \ASTG{} flyby formula}
 
   \keybox{$\displaystyle
@@ -290,9 +234,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 6 -- THE DATA
-%=======================================================================
 \begin{frame}{The complete Earth-flyby inventory}
 
   \vspace{-0.2em}
@@ -330,9 +271,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 7 -- THE FIT
-%=======================================================================
 \begin{frame}{One parameter, fitted globally, no intercept}
 
   \begin{columns}[T]
@@ -367,9 +305,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 8 -- PREDICTIONS
-%=======================================================================
 \begin{frame}{Predictions follow from geometry alone}
 
   \begin{center}
@@ -384,9 +319,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 9 -- ROBUSTNESS
-%=======================================================================
 \begin{frame}{The fit does not rest on any single encounter}
 
   \begin{center}
@@ -411,9 +343,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 10 -- HEMISPHERIC REGULARITY
-%=======================================================================
 \begin{frame}{A regularity in the record: hemisphere sorts the sample}
 
   \begin{center}
@@ -429,9 +358,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 11 -- EUROPA CLIPPER
-%=======================================================================
 \begin{frame}{A pre-registered test: \textit{Europa Clipper}, December 2026}
 
   \begin{columns}[T]
@@ -464,9 +390,6 @@
 
 \end{frame}
 
-%=======================================================================
-% 12 -- SUMMARY
-%=======================================================================
 \begin{frame}{Where the work stands}
 
   \vspace{-0.1em}
@@ -527,9 +450,6 @@
 
 \end{frame}
 
-%=======================================================================
-%  BACKUP  (disabled by default -- see \backupfalse at the preamble)
-%=======================================================================
 \ifbackup
 \appendix
 
