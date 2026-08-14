@@ -23,10 +23,6 @@ NORM = Normalize(-75, 75)
 def decl_color(d):
     return DIVN(NORM(d))
 
-
-# ======================================================================
-# A -- flyby traversal: orbital plane + declination track  (NEAR)
-# ======================================================================
 F = [f for f in FLYBYS if f["name"] == "NEAR"][0]
 eps, rp = F["eps"], F["rp"]
 eta = eta_of(eps)
@@ -52,7 +48,7 @@ for k in range(NF):
     fig, (ax, bx) = plt.subplots(1, 2, figsize=(9.2, 3.9),
                                  gridspec_kw=dict(width_ratios=[1.0, 1.12],
                                                   wspace=0.30))
-    # --- orbital plane
+
     ax.plot(x_full, y_full, color=MUTED, lw=1.3, zorder=3)
     trail = nu_full <= nu_now
     ax.plot(x_full[trail], y_full[trail], color=ACCENT, lw=2.6, zorder=4)
@@ -70,7 +66,6 @@ for k in range(NF):
     ax.text(-LIMA + 2, LIMA - 3.5, r"$\varepsilon=1.81$", fontsize=10,
             color=INK, va="top")
 
-    # --- declination track
     tidy(bx)
     bx.plot(np.degrees(nu_dec), d_dec, color=MUTED, lw=1.5, zorder=3)
     tr2 = nu_dec <= nu_now
@@ -97,9 +92,6 @@ for k in range(NF):
     plt.close(fig)
 print(f"flyby-0..{NF-1}.png")
 
-# ======================================================================
-# B -- growth of the l=1 deformation
-# ======================================================================
 n = 340
 xg = np.linspace(-3, 3, n)
 zg = np.linspace(-3, 3, n)
@@ -138,9 +130,6 @@ for k in range(NF):
     plt.close(fig)
 print(f"potential-0..{NF-1}.png")
 
-# ======================================================================
-# C -- NEAR (southern, asymmetric) vs Europa Clipper (northern, symmetric)
-# ======================================================================
 CASES = [
     dict(lab="NEAR  (1998)", eps=F["eps"], rp=F["rp"], din=F["din"],
          dout=F["dout"], dcos=F["dcos"], note=r"$\Delta V_p=+7.2$ mm s$^{-1}$"),
