@@ -172,13 +172,9 @@ Symmetric Theory of Gravitation, given in partial fulfilment of an MPhil in
 Fundamental Theoretical Astrophysics at the National University of Science and
 Technology, Bulawayo.
 
-**Status note.** The talk was prepared before a subsequent audit of the
-underlying derivation. The central claim it presents — that the ASTG accounts
-for the Earth flyby anomaly — has since been withdrawn by the authors, and the
-associated paper series has been substantially revised. This repository is
-published for the LaTeX and figure-generation technique rather than as a
-current statement of the physics. See the paper repositories under
-[cerealrose](https://github.com/cerealrose) for the current position.
+**Status note.** This repository is published for the LaTeX and figure-generation 
+technique rather than as a current statement of the physics. See the paper 
+repositories under [cerealrose](https://github.com/cerealrose?tab=repositories) for the current position.
 
 ## License
 
