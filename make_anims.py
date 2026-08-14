@@ -1,8 +1,3 @@
-"""Animation frame sequences for \\animategraphics.
-
-Produces  anim/flyby-NN.png, anim/potential-NN.png, anim/europa-NN.png
-Each sequence loops seamlessly and its frame 0 stands alone as a static figure.
-"""
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,7 +13,6 @@ DPI = 96
 
 DIVN = plt.get_cmap("RdBu_r")
 NORM = Normalize(-75, 75)
-
 
 def decl_color(d):
     return DIVN(NORM(d))
